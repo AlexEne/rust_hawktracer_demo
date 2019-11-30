@@ -27,7 +27,7 @@ fn main() {
         scoped_tracepoint!(_outer_scope);
         let arr = vec![0; 3000];
 
-        arr.iter().for_each(|_| {
+        arr.par_iter().for_each(|_| {
             scoped_tracepoint!(_inner_scope);
             profile_me();
             thread::sleep(time::Duration::from_millis(10));
