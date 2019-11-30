@@ -1,0 +1,18 @@
+[package]
+name = "hawktracer_demo"
+version = "0.1.1"
+authors = ["Alexandru <alex.ene0x11@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rayon = "1.0"
+rand = "0.7"
+#rust_hawktracer = {git = "https://github.com/AlexEne/rust_hawktracer.git", features=["profiling_enabled"]}
+# rust_hawktracer = {path = "../rust_hawktracer", features=["profiling_enabled"]}
+
+[dependencies.rust_hawktracer]
+version = "0.6"
+features=["profiling_enabled"]
+
+[profile.release]
+debug = true
